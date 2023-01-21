@@ -4,7 +4,7 @@ import {redirect} from "react-router-dom"
 const URL = "https://project3-backend-tay4.onrender.com/"
 
 // createRecipe action
-export const createAction = async ({request}) => {
+export const createRecipe = async ({request}) => {
     // need form data
     const formData = await request.formData()
     //set up the new recipe according to the recipe schema
