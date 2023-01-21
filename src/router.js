@@ -6,6 +6,8 @@ import {
 import App from "./App"
 import { recipeLoader, recipesLoader } from "./loaders"
 import { createRecipe, updateRecipe, deleteRecipe } from "./actions"
+import Index from "./pages/Index"
+import Show from "./page/Show"
 
 const router = createBrowserRouter(
     createRoutesFromElements(
