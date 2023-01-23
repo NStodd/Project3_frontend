@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom"
+import { useLoaderData, Form } from "react-router-dom"
 
 function Update(props) {
     const recipe = useLoaderData()
@@ -11,6 +11,7 @@ function Update(props) {
                 <input type="input" name="image" defaultValue={recipe.image} />
                 <input type="input" name="ingredients" defaultValue={recipe.ingredients} />
                 <input type="directions" name="directions" defaultValue={recipe.directions} />
+                <input type="submit" value="Update Recipe" />
             </Form>
         </div>
     )
