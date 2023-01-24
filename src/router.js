@@ -7,7 +7,8 @@ import App from "./App"
 import { recipeLoader, recipesLoader } from "./loaders"
 import { createRecipe, updateRecipe, deleteRecipe } from "./actions"
 import Index from "./pages/Index"
-import Show from "./page/Show"
+import Show from "./pages/Show"
+import Create from "./pages/Create"
 
 const router = createBrowserRouter(
     createRoutesFromElements(
