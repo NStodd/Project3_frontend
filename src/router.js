@@ -18,12 +18,8 @@ const router = createBrowserRouter(
             <Route path=":id" element={<Show/>} loader={recipeLoader}/>
             <Route path="new" element={<Create/>}/>
             <Route path="create" action={createRecipe}/>
-<<<<<<< HEAD
-            <Route path="edit/:id" element={<Edit/>}/>  {/*TODO: set this to the appropriate component*/}
+            <Route path="edit/:id" element={<Update/>}/>  {/*TODO: set this to the appropriate component*/}
             <Route path="update/:id" action={updateRecipe}/>
-=======
-            <Route path="update/:id" element= { <Update/> } action={updateRecipe}/>
->>>>>>> b2ccec3001c5d913b7f04a7cb8f346bfa22e910e
             <Route path="delete/:id" action={deleteRecipe}/>
         </Route>
     )
