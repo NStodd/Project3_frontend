@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from "react-router-dom"
+import { Link, useLoaderData, Form } from "react-router-dom"
 
 function Show(props) {
     const recipe = useLoaderData()
@@ -12,9 +12,9 @@ function Show(props) {
             <Link to={`/edit/${recipe._id}`}>
                 <h2>Edit</h2>
             </Link>
-            <Link to={`/delete/${recipe._id}}`}>
-                <h2>Delete</h2>
-            </Link>
+            <Form action={`/delete/${recipe._id}`} method="delete">
+                <input type="submit" value={`Delete ${recipe.name}`} />
+            </Form>
         </div>
     )
 }
