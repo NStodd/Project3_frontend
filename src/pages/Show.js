@@ -1,7 +1,7 @@
 import { useLoaderData } from "react-router-dom"
 
 function Show(props) {
-    const recipe = useLoaderData
+    const recipe = useLoaderData()
 
     return (
         <div className="show-page">
