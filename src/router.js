@@ -24,6 +24,8 @@ const router = createBrowserRouter(
 =======
             <Route path="update/:id" element= { <Update/> } action={updateRecipe}/>
 >>>>>>> b2ccec3001c5d913b7f04a7cb8f346bfa22e910e
+            <Route path="edit/:id" element={<Update/>} loader={recipeLoader}/>
+            <Route path="update/:id" action={updateRecipe}/>
             <Route path="delete/:id" action={deleteRecipe}/>
         </Route>
     )

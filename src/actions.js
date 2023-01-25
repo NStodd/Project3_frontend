@@ -46,7 +46,7 @@ export const updateRecipe = async ({request, params}) => {
         body: JSON.stringify(updatedRecipe)
     })
     //redirect to updated recipe's show page
-    return redirect("/recipe/" + params.id)
+    return redirect(`/${params.id}`)
 }
 
 // deleteRecipe action
