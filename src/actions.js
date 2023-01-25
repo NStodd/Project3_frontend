@@ -1,7 +1,7 @@
 import {redirect} from "react-router-dom"
 
 // this is the render site for the hosted backend
-const URL = "https://project3-backend-tay4.onrender.com/"
+const URL = "https://project3-backend-tay4.onrender.com"
 
 // createRecipe action
 export const createRecipe = async ({request}) => {
@@ -15,7 +15,7 @@ export const createRecipe = async ({request}) => {
         directions: formData.get("directions"),
     }
     // send the new recipe over
-    await fetch(URL + "/recipes", {
+    await fetch(URL + "/recipe", {
         method: "post",
         headers: {
             "Content-Type": "application/json",
@@ -38,7 +38,7 @@ export const updateRecipe = async ({request, params}) => {
         direcitons: formData.get("directions"),
     }
     // send the udpated version over
-    await fetch (URL +"/recipes/" + params.id, {
+    await fetch (URL +"/recipe/" + params.id, {
         method: "put",
         headers: {
             "Content-Type": "application/json"
@@ -46,13 +46,13 @@ export const updateRecipe = async ({request, params}) => {
         body: JSON.stringify(updatedRecipe)
     })
     //redirect to updated recipe's show page
-    return redirect("/recipes/" + params.id)
+    return redirect("/recipe/" + params.id)
 }
 
 // deleteRecipe action
 export const deleteRecipe = async ({params}) => {
     // delete the recipe
-    await fetch (URL + "/recipes/" + params.id, {
+    await fetch (URL + "/recipe/" + params.id, {
         method: "delete"
     })
     // redirect to index
