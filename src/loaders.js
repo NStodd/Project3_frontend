@@ -6,8 +6,8 @@ export const recipesLoader = async () => {
     return recipes;
 }
 
-export const recipeLoader = async ({params}) => {
-    const response = await fetch (URL + "/recipes/" + params.id)
+export const recipeLoader = async ({ params }) => {
+    const response = await fetch(URL + "/recipes/" + params.id)
     const recipe = await response.json()
     return recipe;
 }
