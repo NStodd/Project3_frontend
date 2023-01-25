@@ -18,7 +18,7 @@ const router = createBrowserRouter(
             <Route path=":id" element={<Show/>} loader={recipeLoader}/>
             <Route path="new" element={<Create/>}/>
             <Route path="create" action={createRecipe}/>
-            <Route path="edit/:id" element={<Update/>}/>  {/*TODO: set this to the appropriate component*/}
+            <Route path="edit/:id" element={<Update/>} loader={recipeLoader}/>
             <Route path="update/:id" action={updateRecipe}/>
             <Route path="delete/:id" action={deleteRecipe}/>
         </Route>
