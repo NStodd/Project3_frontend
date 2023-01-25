@@ -4,21 +4,26 @@ import {
     Route
 } from "react-router-dom"
 import App from "./App"
-import { recipeLoader, recipesLoader } from "./loaders"
-import { createRecipe, updateRecipe, deleteRecipe } from "./actions"
 import Index from "./pages/Index"
 import Show from "./pages/Show"
 import Create from "./pages/Create"
+import Update from "./pages/Update"
+import { recipeLoader, recipesLoader } from "./loaders"
+import { createRecipe, updateRecipe, deleteRecipe } from "./actions"
 
 const router = createBrowserRouter(
     createRoutesFromElements(
-        <Route path="" element={<App/>}>
+        <Route path="/" element={<App/>}>
             <Route path="" element={<Index/>} loader={recipesLoader}/>
             <Route path=":id" element={<Show/>} loader={recipeLoader}/>
             <Route path="new" element={<Create/>}/>
             <Route path="create" action={createRecipe}/>
+<<<<<<< HEAD
             <Route path="edit/:id" element={<Edit/>}/>  {/*TODO: set this to the appropriate component*/}
             <Route path="update/:id" action={updateRecipe}/>
+=======
+            <Route path="update/:id" element= { <Update/> } action={updateRecipe}/>
+>>>>>>> b2ccec3001c5d913b7f04a7cb8f346bfa22e910e
             <Route path="delete/:id" action={deleteRecipe}/>
         </Route>
     )

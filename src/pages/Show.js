@@ -1,7 +1,20 @@
+import { Link, useLoaderData } from "react-router-dom"
+
 function Show(props) {
+    const recipe = useLoaderData()
+
     return (
-        <div>
-            <h2>Show Page</h2>
+        <div className="show-page">
+            <img src={recipe.image} alt={recipe.name} />
+            <h1>{recipe.name}</h1>
+            <h2>{recipe.ingredients}</h2>
+            <h2>{recipe.directions}</h2>
+            <Link to={`/update/${recipe._id}}`}>
+                <h2>Edit</h2>
+            </Link>
+            <Link to={`/delete/${recipe._id}}`}>
+                <h2>Delete</h2>
+            </Link>
         </div>
     )
 }
