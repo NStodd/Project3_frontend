@@ -14,7 +14,7 @@ function Show(props) {
             {/* <h3 dangerouslySetInnerHTML={{__html: ReplaceWithBr()}} /> */}
             {CreateArray().map(ingredient => (
             <div>
-                <h3>{ingredient}</h3>
+                <h5>{ingredient}</h5>
             </div>
         ))}
             </div>
