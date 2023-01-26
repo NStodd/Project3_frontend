@@ -15,7 +15,7 @@ function Show(props) {
             {console.log("in the Show page")}
             {CreateArray().map(ingredient => (
             <div>
-                <h3>{ingredient}</h3>
+                <h5>{ingredient}</h5>
             </div>
         ))}
             </div>
