@@ -5,11 +5,9 @@ function Header(props) {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand>
-          <Link to='/'>React Cookbook</Link>
-        </Navbar.Brand>
+        <Navbar.Brand to='/'> React Cookbook </Navbar.Brand>
         <Nav className="navbar">
-          <Link to='/new'>Create Recipe</Link>
+          <Nav.Link to='/new'> Create Recipe </Nav.Link>
         </Nav>
       </Container>
     </Navbar>
