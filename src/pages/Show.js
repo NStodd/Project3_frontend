@@ -12,9 +12,10 @@ function Show(props) {
             <h2>Ingredients:</h2>
             <div className="break-string">
             {/* <h3 dangerouslySetInnerHTML={{__html: ReplaceWithBr()}} /> */}
+            {console.log("in the Show page")}
             {CreateArray().map(ingredient => (
             <div>
-                <h3>{ingredient}</h3>
+                <h5>{ingredient}</h5>
             </div>
         ))}
             </div>
