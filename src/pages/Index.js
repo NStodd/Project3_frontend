@@ -1,13 +1,19 @@
 import { useLoaderData } from "react-router-dom"
+import { Card } from "react-bootstrap"
+
 
 function Index(props) {
-    const recipe = useLoaderData
+    const recipe = useLoaderData()
 
-    return (
-        <div className="index-page">
-            <h2>Index Page</h2>
-            <h2>My Recipes</h2>
-        </div>
-    )
+    return <div className="cardDisplay">
+        {recipe.map(recipe => (
+            <Card className="recipe">
+                <Card.Header as="h5">{recipe.name}</Card.Header>
+                <a href={`/${recipe._id}`}>
+                    <Card.Img variant="top" src={recipe.image} alt={recipe.name}></Card.Img>
+                </a>
+            </Card>
+        ))}
+    </div>
 }
 export default Index
