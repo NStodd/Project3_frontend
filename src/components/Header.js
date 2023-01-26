@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom"
+import { Container, Nav, Navbar } from "react-bootstrap"
 
 function Header(props) {
   return (
-    <nav className="nav">
-      <Link to="/">
-        <h1>Home</h1>
-      </Link>
-      <Link to='/new'>
-        <div>Create Recipe</div>
-      </Link>
-    </nav>
+    <Navbar bg="light" expand="lg">
+      <Container>
+        <Navbar.Brand href="/">React Cookbook</Navbar.Brand>
+        <Nav className="navbar">
+          <Nav.Link href='/new'>Create Recipe</Nav.Link>
+        </Nav>
+      </Container>
+    </Navbar>
   )
 }
 

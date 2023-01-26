@@ -1,0 +1,11 @@
+            <div key={recipe._id} className="recipe">
+                <Link to={`/${recipe._id}`}>
+                    <h1>{recipe.name}</h1>
+                </Link>
+                <img src={recipe.image} alt={recipe.name} />
+            </div>
+
+
+            <Card.Body>
+                <Button href= variant="primary">See Recipe</Button>
+            </Card.Body>
