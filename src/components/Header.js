@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import { Container, Nav, Navbar } from "react-bootstrap"
 
 function Header(props) {
