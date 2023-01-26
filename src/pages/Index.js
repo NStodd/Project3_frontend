@@ -1,4 +1,5 @@
 import { Link, useLoaderData } from "react-router-dom"
+import { Button, Card } from "react-bootstrap"
 
 
 function Index(props) {
@@ -6,12 +7,12 @@ function Index(props) {
 
     return <div className="cardDisplay">
         {recipe.map(recipe => (
-            <div key={recipe._id} className="recipe">
-                <Link to={`/${recipe._id}`}>
-                    <h1>{recipe.name}</h1>
-                </Link>
-                <img src={recipe.image} alt={recipe.name} />
-            </div>
+            <Card className="recipe">
+                <Card.Header as="h5">{recipe.name}</Card.Header>
+                <a href={`/${recipe._id}`}>
+                    <Card.Img variant="top" src={recipe.image} alt={recipe.name}></Card.Img>
+                </a>
+            </Card>
         ))}
     </div>
 }
