@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom"
+import { useLoaderData, Link } from "react-router-dom"
 import { Card } from "react-bootstrap"
 
 
@@ -9,9 +9,9 @@ function Index(props) {
         {recipe.map(recipe => (
             <Card className="recipe">
                 <Card.Header as="h5">{recipe.name}</Card.Header>
-                <a href={`/${recipe._id}`}>
+                <Link to={`/${recipe._id}`}>
                     <Card.Img variant="top" src={recipe.image} alt={recipe.name}></Card.Img>
-                </a>
+                </Link>
             </Card>
         ))}
     </div>
