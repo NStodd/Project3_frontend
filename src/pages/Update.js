@@ -4,7 +4,7 @@ function Update(props) {
     const recipe = useLoaderData()
 
     return (
-        <div className="update-page">
+        <div className="form-page">
             <h2>Update {recipe.name}</h2>
             
             <Form action={`/update/${recipe._id}`} method="post">
