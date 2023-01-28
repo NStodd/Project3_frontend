@@ -1,4 +1,4 @@
-const URL = "https://project3-backend-tay4.onrender.com"
+const URL = "http://localhost:3565"
 
 export const recipesLoader = async () => {
     const response = await fetch(URL + "/recipe")

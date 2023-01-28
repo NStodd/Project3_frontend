@@ -10,10 +10,10 @@ function User_Login(props) {
             <Form action="/login" method="post">
                 <fieldset>
                         <label>
-                            UserName: <input className="login_username" type="text" required></input>
+                            UserName: <input className="login_username" type="text" name="username" required></input>
                         </label><br></br>
                         <label>
-                            Password: <input className="login_password" type="password" required></input>
+                            Password: <input className="login_password" type="password" name="password" required></input>
                         </label>
                 </fieldset>
                 <button><input type="submit" className="login_button" defaultValue="Log In" />

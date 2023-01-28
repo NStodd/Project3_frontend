@@ -11,7 +11,7 @@ import Update from "./views/Update"
 import UserLogin from "./views/User_login_signup/UserLogin"
 import UserSignup from "./views/User_login_signup/UserSignup"
 import { recipeLoader, recipesLoader } from "./loaders"
-import { createRecipe, updateRecipe, deleteRecipe } from "./actions"
+import { createRecipe, updateRecipe, deleteRecipe, createUser } from "./actions"
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -24,6 +24,7 @@ const router = createBrowserRouter(
             <Route path="delete/:id" action={deleteRecipe}/>
             <Route path="/:id" element={<Show/>} loader={recipeLoader}/>
             <Route path="/signup" element={<UserSignup/>}/>
+            <Route path="/user_signup" action={createUser}/>
             <Route path="/login" element={<UserLogin/>}/>
         </Route>
     )

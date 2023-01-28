@@ -7,16 +7,16 @@ function User_Signup(props) {
             <h1>React Recipe Cookbook Signup</h1>
             <br></br>
             <body class="usersignup_container">
-            <Form action="/signup" method="post">
+            <Form action="/user_signup" method="post">
                 <fieldset>
                         <label>
-                            UserName: <input className="signup_username" type="text" required></input>
+                            UserName: <input className="signup_username" name="username" type="text" required></input>
                         </label><br></br>
                         <label>
-                            Email: <input className="signup_email" type="text" required></input>
+                            Email: <input className="signup_email" name="email" type="text" required></input>
                         </label><br></br>
                         <label>
-                            Password: <input className="signup_password" type="password" required></input>
+                            Password: <input className="signup_password" name="password" type="password" required></input>
                         </label><br></br>
                         <label>
                             Confirm Password: <input className="signup_password" type="password" required></input>
