@@ -9,3 +9,10 @@
             <Card.Body>
                 <Button href= variant="primary">See Recipe</Button>
             </Card.Body>
+
+
+
+            showTitle - Show page title
+            showImage
+            button tag for edit
+            form submit for delete

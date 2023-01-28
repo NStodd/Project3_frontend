@@ -58,3 +58,25 @@ textarea{
     box-shadow: inset 0 0 5px grey;
     border-radius: 10px;
   }
+
+// show page classes
+.showTitle {
+    text-align: center;
+    padding: 10px;
+    text-decoration: underline;
+}
+
+.showImage {
+    border-radius: 10px;
+    border: solid black 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 50%;
+    min-width: 50%;
+}
+
+button {
+
+}
