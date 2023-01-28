@@ -30,12 +30,19 @@ export const createRecipe = async ({request}) => {
 export const updateRecipe = async ({request, params}) => {
     // need form data
     const formData = await request.formData()
+
+    //console logs for debugging
+    console.log(formData.get("name"))
+    console.log(formData.get("image"))
+    console.log(formData.get("ingredients"))
+    console.log(formData.get("directions"))
+
     // set up new version of recipe
     const updatedRecipe = {
         name: formData.get("name"),
         image: formData.get("image"),
         ingredients: formData.get("ingredients"),
-        direcitons: formData.get("directions"),
+        directions: formData.get("directions"),
     }
     // send the udpated version over
     await fetch (URL +"/recipe/" + params.id, {
